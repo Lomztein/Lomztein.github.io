@@ -1,88 +1,51 @@
+<!DOCTYPE html>
 <html>
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<title>Faggot Simulator 2015</title>
-		<style>
-			#boks {
-				position:absolute;
-				top: 30%;
-				left: 50%;
-				margin-left: -125px;
-				width: 250px;
-				font-family: Verdana;
-			}			
-		</style>
-		<script>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- I litterly stole this HTML from www.motherfuckingwebsite.com, because I have no idea how to HTML. Thanks @thebarrytone for writing a bunch of generic tags, or whatever they are called. -->
+    
+    <title>Who the fuck am I?</title>
+</head>
 
-			var base = 2;
+<body>
+    <header>
+        <h1>Oh, apparently GitHub gives me a website, Yay?</h1>
+    </header>
+        
+        <h2>I'm just gonna use this as some sort of dump.</h2>
+        
+        <p>I have no idea why you are even here. Perhaps I gave you the link? Perhaps you found the link somehow? Perhaps some deity thought I was freaking awesome and blessed you with this link? None of that really matters, because there isn't really anything to enjoy here. That is, unless you enjoy looking through my old projects and homework.</p>
 
-			function ReadX() {
+        <p>Anyways, now that you are here, I might as well tell you a few things about me, because that's what you do with these sorts of websites, right? Right. I was born somewhen between big bang and now. I live in the milky way galixy, and I bang my head to people screaming inconherintly. Also, I like smashing my keyboard into code, which takes most of my time.</p>
 
-  				var indTal = "";
-    			var udTal;
+        <p>However, when I'm not breaking my neck, smashing my keyboard or being born, I like videogames. Yes, I am that fucking special. At the time of writing, I find PlanetSide 2 to be one helluva drug. Also, school is fun, because I learn HTML, robotics, computer architecture, binary, process control, and a lot of other shit. One day I might even know enough HTML to write a proper website, instead of just stealing it off some other fellow, and rewriting major parts of it.</p>
 
-  				indTal = document.getElementById("tal").value;  
-				udTal = Omregn(indTal);
-    			document.getElementById("res").innerHTML = "Resultat: " + udTal + "\n, " + udTal.length + " bits. Nærmeste standard: " + GetStandardBitAmount (udTal.length);	
-			}
-					
-			function Omregn(tal) {
+        <p>I would call myself an experienced programmer, but that would be a lie. I can one language enough to write games out of it, which is C#. I also know a bunch of GML, but that's not really a language that counts. Also, I can write an amount of Javascript, but that's practically only because I know C#, and they aren't awfully different, at least at the basic level. While I can't really call it work, I am working in a group-thingie-studio called Awesomenium Studios, which I formed with a friend of mine, and create games with many other friends to put up there. Though, we don't have anything to put up there. Fucking PlanetSide 2, man.</p>
 
-				var absMax = 1024;
-				tal = parseInt (tal);
-				var ans = "";
+        <p>No, I am not an educated programmer. I'm not really an educated anything, because I just started becoming an educated programmer/computer person. I also sorta techically have a tiny, tiny education education in welding, and therefor have permission, I think. However, I don't care an awful lot about welding, because I have other shit to do.</p>
 
-				var max = 1;
-				while (max < tal - max + 1) max *= base; //Find det maksimale 2^x tal, der er under input.
+        <p>I could get really depressive and talk about my personal problems, but that would just be annoying and boring to read. Yes I have problems, and no, I am not going to share them with you, unless I trust you 100%, or is incredibly drunk. Trust issues, you know. There are very, very few people I trust in this world. Shit, I'll stop writing about that now.</p>
 
-				while (max >= 1 && absMax > 0) { //Start loop med en maksimal mængde gennemgange.
-					var loc = tal - max;
-					if (loc > -0.1) { //Sammenlign inputstallet med max variablen.
-						ans += "1";
-						tal -= max;
-						max /= base; //Hvis max er højere end inputtallet, så put et "1" i svaret, og minus inputtallet med max.
-					}else{
-						ans += "0";
-						max /= base; //Ellers, put et "0" i svaret.
-					}
-					//Lige meget hvad bliver max divideret med base, for at gå videre til næste bit. (eks. 256 > 128 > 64 osv.)
+        <p>Anyways, I have written a bunch of different shit during the last couple of years.</p>
 
-					absMax -= 1;
-					if (absMax < 1) { return "For mange gennemgange, stopper loop."} //Sørg for at koden aldrig danner et uendeligt loop.
-				}
-				ans = reverse(ans); //Svaret er vændt forkert, så det vændes om.
-				return ans;
+        <p><a href="http://sandbox.yoyogames.com/games/184810-tankmania">TankMania, I made this when I was like 13.</a><br>
+        <a href="http://sandbox.yoyogames.com/games/186132-learn-to-drive-those-zombies-down">Learn To Drive Those Zombies Down, this was made when I was about 14, also, it's shit.</a><br>
+        <a href="http://lomztein.github.io/Incoming!.exe">Incoming! My first ever venture into code, instead of drag and drop shit. Approximately two years old.</a><br>
+        <a href="http://lomztein.github.io/Combtress.exe">Combtress, riddled with bugs, as development stopped like 1.5 years ego.</a><br>
+        <a href="http://lomztein.github.io/Fatique.zip">Fatique, my first ever Unity project. You can imagine how well that went.</a><br>
+        <a href="http://lomztein.github.io/AwesomeTD.zip">AwesomeTD, tried to build a 3D tower defence, failed to build a 3D tower defence.</a><br>
+        <a href="http://lomztein.github.io/CombtressArena.zip">Combtress: Arena, was originally planned to have multiplayer, bu failed at that.</a><br>
+        <a href="http://lomztein.github.io/3DBattleshipPrototype.zip">3D Battleship Prototype, wanted to do something voxel-based, and this happened.</a><br>
+        <a href="http://lomztein.github.io/TankManiaReloaded.zip">TankManiaReloaded, most likely the most refined Unity game I have so far. Also, this actually have a somewhat working multiplayer mode.</a></p>
+                
+        <p>I also have a few other places where I put stuff I build. This includes <a href="www.youtube.com/user/Lomztein">YouTube</a>, <a href="www.github.com/lomztein">GitHub</a>, and perhaps some other place which I can't remember.</p>
 
-			}
+        <p>I also do homework, albiet very rarely:</p>
+        <a href="http://lomztein.github.io/dectobin.html">Some shit I wrote in that converts a number into binary. Also, it's in danish because homework.</a></p>
 
-			function GetStandardBitAmount (tal) { //Find mængden af standard bits tallet skal bruge (eks. 8, 16, 32 osv.)
-				var loc = 1;
-				while (loc < tal) loc *= base;
-				return loc;
-			}
-
-			function Power (num, pow) { //Overflødig udregning af potens. Bugger off.
-				for (var i=0;i<pow;i++) {
-					num *= num;
-				}
-				return num;
-			}
-
-			function reverse(s) { //Vænd svaret om, sådan det ikke er omvændt.
-				var o = '';
-				for (var i = s.length - 1; i >= 0; i--)
-			    	o += s[i];
-			 	return o;
-			}
- 		</script>
-		
-	</head>
-	
-	<body>
-		<div id="boks">
-			Indtast tal der skal omregnes
-			<input id="tal" onkeyup="ReadX()" size="8"><br>			
-			<p  id="res">Resultat</p>
-		</div>		
-	</body>
+        <p>I love my fathers dog "Snehvide" above everything. Now fuck off.
+    
+    </body>
 </html>

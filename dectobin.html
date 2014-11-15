@@ -1,0 +1,88 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Faggot Simulator 2015</title>
+		<style>
+			#boks {
+				position:absolute;
+				top: 30%;
+				left: 50%;
+				margin-left: -125px;
+				width: 250px;
+				font-family: Verdana;
+			}			
+		</style>
+		<script>
+
+			var base = 2;
+
+			function ReadX() {
+
+  				var indTal = "";
+    			var udTal;
+
+  				indTal = document.getElementById("tal").value;  
+				udTal = Omregn(indTal);
+    			document.getElementById("res").innerHTML = "Resultat: " + udTal + "\n, " + udTal.length + " bits. Nærmeste standard: " + GetStandardBitAmount (udTal.length);	
+			}
+					
+			function Omregn(tal) {
+
+				var absMax = 1024;
+				tal = parseInt (tal);
+				var ans = "";
+
+				var max = 1;
+				while (max < tal - max + 1) max *= base; //Find det maksimale 2^x tal, der er under input.
+
+				while (max >= 1 && absMax > 0) { //Start loop med en maksimal mængde gennemgange.
+					var loc = tal - max;
+					if (loc > -0.1) { //Sammenlign inputstallet med max variablen.
+						ans += "1";
+						tal -= max;
+						max /= base; //Hvis max er højere end inputtallet, så put et "1" i svaret, og minus inputtallet med max.
+					}else{
+						ans += "0";
+						max /= base; //Ellers, put et "0" i svaret.
+					}
+					//Lige meget hvad bliver max divideret med base, for at gå videre til næste bit. (eks. 256 > 128 > 64 osv.)
+
+					absMax -= 1;
+					if (absMax < 1) { return "For mange gennemgange, stopper loop."} //Sørg for at koden aldrig danner et uendeligt loop.
+				}
+				ans = reverse(ans); //Svaret er vændt forkert, så det vændes om.
+				return ans;
+
+			}
+
+			function GetStandardBitAmount (tal) { //Find mængden af standard bits tallet skal bruge (eks. 8, 16, 32 osv.)
+				var loc = 1;
+				while (loc < tal) loc *= base;
+				return loc;
+			}
+
+			function Power (num, pow) { //Overflødig udregning af potens. Bugger off.
+				for (var i=0;i<pow;i++) {
+					num *= num;
+				}
+				return num;
+			}
+
+			function reverse(s) { //Vænd svaret om, sådan det ikke er omvændt.
+				var o = '';
+				for (var i = s.length - 1; i >= 0; i--)
+			    	o += s[i];
+			 	return o;
+			}
+ 		</script>
+		
+	</head>
+	
+	<body>
+		<div id="boks">
+			Indtast tal der skal omregnes
+			<input id="tal" onkeyup="ReadX()" size="8"><br>			
+			<p  id="res">Resultat</p>
+		</div>		
+	</body>
+</html>
