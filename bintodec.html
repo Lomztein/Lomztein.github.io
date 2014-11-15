@@ -1,0 +1,75 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Faggot Simulator 2015</title>
+		<style>
+			#boks {
+				position:absolute;
+				top: 30%;
+				left: 50%;
+				margin-left: -125px;
+				width: 250px;
+				font-family: Verdana;
+			}			
+		</style>
+		<script>
+
+			var base = 2;
+
+			function ReadX() {
+
+  				var indTal = "";
+    			var udTal;
+
+  				indTal = document.getElementById("tal").value;  
+				udTal = Omregn(indTal);
+    			document.getElementById("res").innerHTML = "Resultat: " + udTal + "\n, " + indTal.length + " bits. Nærmeste standard: " + GetStandardBitAmount (indTal.length);	
+			}
+					
+			function Omregn(tal) {
+
+				var absMax = 1024;
+				var ans = 0;
+
+				var max = 1;
+				for (var i = tal.length-1 ; i >= 0; i--) {
+					var val = Math.pow (base, i);
+					var num = parseInt (tal.charAt(i));
+					if (num > base-1) return "Input går over base tal";
+					console.log(i + ", " + num * val);
+				}
+				return ans;
+
+			}
+
+			function GetStandardBitAmount (tal) { //Find mængden af standard bits tallet skal bruge (eks. 8, 16, 32 osv.)
+				var loc = 1;
+				while (loc < tal) loc *= base;
+				return loc;
+			}
+
+			function Power (num, pow) { //Overflødig udregning af potens. Bugger off.
+				for (var i=0;i<pow;i++) {
+					num *= num;
+				}
+				return num;
+			}
+
+			function reverse(s) { //Vænd svaret om, sådan det ikke er omvændt.
+				var o = '';
+				for (var i = s.length - 1; i >= 0; i--)
+			    	o += s[i];
+			 	return o;
+			}
+ 		</script>
+		
+	</head>
+	
+	<body>
+		<div id="boks">
+			Indtast tal der skal omregnes
+			<input id="tal" onkeyup="ReadX()" size="8"><br>			
+			<p  id="res">Resultat</p>
+		</div>		
+	</body>
+</html>
