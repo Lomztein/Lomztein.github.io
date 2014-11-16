@@ -6,12 +6,12 @@
     
     <!-- I litterly stole this HTML from www.motherfuckingwebsite.com, because I have no idea how to HTML. Thanks @thebarrytone for writing a bunch of generic tags, or whatever they are called. -->
     
-    <title>Who the fuck am I?</title>
+    <title>Who the fuck am I? God, that is who.</title>
 </head>
 
-<body>
+<body onload="GetButtomText()">
     <header>
-        <h1>Oh, apparently GitHub gives me a website, Yay?</h1>
+        <h1>Oh, apparently GitHub gives me a website, yay?</h1>
     </header>
         
         <h2>I'm just gonna use this as some sort of dump.</h2>
@@ -30,8 +30,8 @@
 
         <p>Anyways, I have written a bunch of different shit during the last couple of years.</p>
 
-        <p><a href="Games/sandbox.yoyogames.com/games/184810-tankmania">TankMania, I made this when I was like 13.</a><br>
-        <a href="Games/sandbox.yoyogames.com/games/186132-learn-to-drive-those-zombies-down">Learn To Drive Those Zombies Down, this was made when I was about 14, also, it's shit.</a><br>
+        <p><a href="http://sandbox.yoyogames.com/games/184810-tankmania">TankMania, I made this when I was like 13.</a><br>
+        <a href="http://sandbox.yoyogames.com/games/186132-learn-to-drive-those-zombies-down">Learn To Drive Those Zombies Down, this was made when I was about 14, also, it's shit.</a><br>
         <a href="Games/lomztein.github.io/Incoming!.exe">Incoming! My first ever venture into code, instead of drag and drop shit. Approximately two years old.</a><br>
         <a href="Games/lomztein.github.io/Combtress.exe">Combtress, riddled with bugs, as development stopped like 1.5 years ego.</a><br>
         <a href="Games/Fatique.zip">Fatique, my first ever Unity project. You can imagine how well that went.</a><br>
@@ -39,6 +39,8 @@
         <a href="Games/CombtressArena.zip">Combtress: Arena, was originally planned to have multiplayer, bu failed at that.</a><br>
         <a href="Games/3DBattleshipPrototype.zip">3D Battleship Prototype, wanted to do something voxel-based, and this happened.</a><br>
         <a href="Games/TankManiaReloaded.zip">TankMania: Reloaded, most likely the most refined Unity game I have so far. Also, this actually have a somewhat working multiplayer mode.</a></p>
+
+        <p>None of these projects were ever finished, and will contain bugs, might crash, will lack features, and may very likely suck hard. Seriously, Fatique is barely playable, and I'm pretty sure 3D Battleship Prototype isn't playable either. However, I do believe you can watch a bunch of retarded AI's fighing eachother. IN 3D! :O</p>
                 
         <p>I also have a few other places where I put stuff I build. This includes <a href="http://youtube.com/user/Lomztein">YouTube</a>, <a href="http://github.com/lomztein">GitHub</a>, and perhaps some other place which I can't remember.</p>
 
@@ -48,9 +50,51 @@
         <a href="dectobin.html">Some shit I wrote in that converts a number into binary. Also, it's in danish because homework.</a><br>
         <a href="bintodec.html">This one is like the one above, just turns binary into decimal instead. So, the oppisite of the one above.</a></p>
 
-        <p><a href="victor.html">I am putting this here for everyone to forever admire. Created by Victor "MultiScootaloo" Koch.</a></p>
+        <p><a href="victor.html">I am putting this here for everyone to forever admire. Created by Victor "MultiScootaloo" Koch.</a><br>It is amazing. If you disagree, you must be terminated through painful means.</p>
 
-        <p>I love my fathers dog "Snehvide" above everything. Now fuck off.
-    
+        <p>Also, I often take the name "Space Jesus" instead of my regular name. I believe I first got the name from Deep Space 69. <a href= "http://www.youtube.com/show/deepspace69">Go watch Deep Space 69 now.</a> This is due to my very Jesus'y apperance, with long, fabouless hair. Also, I know a thing or two about space, but no more then a thing or two. Whenever people call my by this name, I become God. That last part isn't true, but you'd damn well believe it anyways.</p>
+
+        <p>Holy shit this place makes me sound cynical. I should really stop watching <a href="http://www.youtube.com/watch?v=4jC67AVcbms&list=PLAbMhAYRuCUhC85vZRvBBdYPJk-9pLN-8&index=175">Zero Punctuation</a>, but you shouldn't. Seriously though, it's mostly just for the lulz, I'm pretty light-heartet. At least that's what I force myself to believe.</p>
+
+        <p>I love my fathers dog "Snehvide" above everything. Now fuck off.</p>
+
+        <script>
+            
+            function GetButtomText () {
+                var p = [
+                "<3",
+                "*less than three*",
+                ":D",
+                "Fuck off.",
+                "i fukd ur mum.",
+                "Don't blink.",
+                "I can smell you.",
+                "DENMAG!",
+                "TO VALHALLA",
+                "ÆØÅ",
+                "Renegade X is God.",
+                "SEDUCE ME.",
+                "^^",
+                ":3",
+                "o.O",
+                "( ͡° ͜ʖ ͡°)",
+                "Penis joke",
+                "<4 is obviously better than <3.",
+                "This shit is fucking hilarious.",
+                "LAUGH, FAGGET.",
+                "This site doesn't care if it's offensive.",
+                "C# MASTERRACE, JAVASCRIPT MUST DIE.",
+                ">1",
+                ">:D",
+                "( . Y . )"
+                ]
+                var val = Math.ceil (Math.random() * p.length - 1);
+                console.log(val + ", " + p[val]);
+                document.getElementById ("buttomText").textContent = p[val];
+            }
+        </script>
+
+        <h1><center><div id="buttomText"></div></center></h1>
+
     </body>
 </html>
